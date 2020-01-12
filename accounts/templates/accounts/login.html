@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>Login Page</title>
+{%endblock%}
+{%block body%}
+<div class="container">
+  <h1 align="center">Welcome!</h1>
+  <p align="center"> You can login here</p>
+  <form method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button btn btn-primary type="submit">Login</button>
+  </form>
+<div>
+{%endblock%}
